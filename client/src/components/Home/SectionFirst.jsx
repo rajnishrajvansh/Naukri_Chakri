@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Grid, Typography, TextField, InputAdornment, IconButton, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import CheckIcon from '@mui/icons-material/Check';
+import working from '../../assets/woman_working.jpeg';
 
 const SectionFirst = () => {
     return (
@@ -15,7 +16,7 @@ const SectionFirst = () => {
                     xs={12}
                     md={6}
                     sx={{
-                        backgroundImage: `url(.././src/assets/woman_working.jpeg)`,
+                        backgroundImage: `url(${working})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         height: '80vh',
