@@ -1,0 +1,80 @@
+import React from 'react';
+import { Box, Grid, Typography, TextField, InputAdornment, IconButton, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
+import CheckIcon from '@mui/icons-material/Check';
+
+const SectionFirst = () => {
+    return (
+        <Box sx={{ backgroundColor: '#eee6db', minHeight: '100vh', display: 'flex', paddingTop: '2%' }}
+        className="dark:bg-slate-800"
+        >
+     
+            <Grid container sx={{ height: '100%' }}>
+                <Grid
+                    item
+                    xs={12}
+                    md={6}
+                    sx={{
+                        backgroundImage: `url(.././src/assets/woman_working.jpeg)`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        height: '80vh',
+                        borderRadius:'20px',
+                       
+                    }}
+                ></Grid>
+                <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: 4 }}>
+                    <Typography variant="h2" sx={{ fontWeight: 'bold' }}>
+                        Find The Perfect<br />Job For You
+                    </Typography>
+                    <Typography variant="h6" sx={{ color: 'gray', marginTop: 2 }}>
+                        Search your career opportunity ,anytime, anywhere
+                    </Typography>
+                    <Box sx={{ display: 'flex', alignItems: 'center', marginTop: 4 }}>
+                        <TextField
+                            variant="outlined"
+                            placeholder="Search job title"
+                            sx={{ flex: 1, marginRight: 2, '& .MuiOutlinedInput-root': { borderRadius: '20px', background: 'white', color: 'black' } }}
+                        />
+                        <TextField
+                            variant="outlined"
+                            placeholder="Location"
+                            sx={{ flex: 1, '& .MuiOutlinedInput-root': { borderRadius: '20px', background: 'white', color: 'black' }}}
+                            InputProps={{
+                                endAdornment: (
+                                    <InputAdornment position="end">
+                                        <IconButton sx={{ bgcolor: 'orange', borderRadius: '20px', color: 'white' }}>
+                                            <SearchIcon />
+                                        </IconButton>
+                                    </InputAdornment>
+                                ),
+                            }}
+                        />
+                    </Box>
+                    <List sx={{ marginTop: 4 }}>
+                        <ListItem>
+                            <ListItemIcon>
+                                <CheckIcon className='dark:text-white'/>
+                            </ListItemIcon>
+                            <ListItemText primary="Wide range of job categories" />
+                        </ListItem>
+                        <ListItem>
+                            <ListItemIcon>
+                                <CheckIcon className='dark:text-white'/>
+                            </ListItemIcon>
+                            <ListItemText primary="Flexible working hours" />
+                        </ListItem>
+                        <ListItem>
+                            <ListItemIcon>
+                                <CheckIcon className='dark:text-white'/>
+                            </ListItemIcon>
+                            <ListItemText primary="Remote work options" />
+                        </ListItem>
+                    </List>
+                </Grid>
+            </Grid>
+        </Box>
+    );
+};
+
+export default SectionFirst;
